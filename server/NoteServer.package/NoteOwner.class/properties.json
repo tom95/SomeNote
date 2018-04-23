@@ -1,0 +1,16 @@
+{
+	"category" : "NoteServer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"password",
+		"salt",
+		"name" ],
+	"name" : "NoteOwner",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

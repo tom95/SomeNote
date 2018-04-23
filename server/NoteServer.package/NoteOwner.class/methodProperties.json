@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"from:" : "TB 4/22/2018 22:14" },
+	"instance" : {
+		"encryptPassword:" : "TB 4/22/2018 22:17",
+		"initializeFrom:" : "TB 4/22/2018 22:20",
+		"name" : "TB 4/22/2018 21:10",
+		"name:" : "TB 4/22/2018 21:11",
+		"password" : "TB 4/22/2018 21:10",
+		"passwordMatches:" : "TB 4/22/2018 22:18",
+		"salt" : "TB 4/22/2018 21:10" } }

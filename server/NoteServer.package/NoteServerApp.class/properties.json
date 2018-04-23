@@ -1,0 +1,16 @@
+{
+	"category" : "NoteServer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"connection",
+		"connectionArguments",
+		"server" ],
+	"name" : "NoteServerApp",
+	"pools" : [
+		 ],
+	"super" : "RPApplication",
+	"type" : "normal" }
