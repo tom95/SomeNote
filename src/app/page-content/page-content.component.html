@@ -1,0 +1,6 @@
+<div *ngIf="page" class="p-4">
+    <div class="input-group input-group-lg mb-4">
+        <input [(ngModel)]="page.title" placeholder="Title of Page" type="text" class="form-title form-control">
+    </div>
+    <textarea class="form-control"> {{ page.content }} </textarea>
+</div>

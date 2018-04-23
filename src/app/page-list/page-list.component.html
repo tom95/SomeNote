@@ -1,0 +1,10 @@
+<div *ngIf="notebook">
+    <ul class="list-group">
+        <li class="list-group-item"
+            *ngFor="let page of notebook.pages"
+            [class.active]="page === mySelectedPage"
+            (click)="onSelect(page)">
+            <span> {{ page.title }} </span>
+        </li>
+    </ul>
+</div>
