@@ -1,6 +1,7 @@
 import { Page } from './page'
 
-export class Notebook {
+export interface Notebook {
   title: string;
   pages: Page[]
+  id: number;
 }
