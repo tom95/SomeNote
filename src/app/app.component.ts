@@ -35,4 +35,22 @@ export class AppComponent {
       this.selectedPage = null;
     })
   }
+
+  addNotebook() {
+    let title = prompt('Title?')
+    if (!title)
+      return
+    this.server.createNotebook(title).subscribe(notebook => {
+      this.notebooks.push(notebook)
+    })
+  }
+
+  addPage() {
+    let title = prompt('Title?')
+    if (!title)
+      return
+    this.server.createPage(title, this.selectedNotebook).subscribe(page => {
+      this.selectedNotebook.pages.push(page)
+    })
+  }
 }

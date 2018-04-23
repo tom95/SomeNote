@@ -8,10 +8,13 @@
         <span> {{ notebook.title }} </span>
       </li>
     </ul>
+
+    <button (click)="addNotebook()" class="btn btn-default mt-4">Add Notebook</button>
   </div>
 
   <div class="col pl-0 pr-0">
     <app-page-list [notebook]="selectedNotebook" (selectedPage)="selectedPage = $event"></app-page-list>
+    <button (click)="addPage()" class="btn btn-default mt-4">Add Page</button>
   </div>
   <div class="col-8">
     <app-page-content [page]="selectedPage"></app-page-content>

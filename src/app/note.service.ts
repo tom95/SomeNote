@@ -23,8 +23,8 @@ export class NoteService {
     return !!this.token;
   }
 
-  login(user: string, password: string) {
-    return this.http.post<LoginReply>(API_ROOT + '/login', {user, password})
+  login(name: string, password: string) {
+    return this.http.post<LoginReply>(API_ROOT + '/login', {name, password})
       .mergeMap(data => this.saveToken(data.token))
   }
 
