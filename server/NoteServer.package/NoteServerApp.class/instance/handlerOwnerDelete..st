@@ -3,7 +3,7 @@ handlerOwnerDelete: id
 	<delete: '/owner/([^/]+)'>
 
 	| res ownerId |
-	ownerId := self requestUserIdIfNone: [^ self unauthorized].
+	ownerId := self requestOwnerdIfNone: [^ self unauthorized].
 	ownerId ~= id ifTrue: [^ self unauthorized].
 	
 	res := self executeSQLStatement: 'DELETE FROM owner WHERE id=', id.

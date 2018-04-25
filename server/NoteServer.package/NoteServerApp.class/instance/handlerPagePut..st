@@ -10,6 +10,6 @@ handlerPagePut: id
 	
 	data ifEmpty: [^ self badRequest].
 	
-	self executeSQLStatement: ('UPDATE page SET ', ((Array streamContents: [:stream | data keysAndValuesDo: [:key :val | stream nextPut: key, '=''', val, '''']]) joinSeparatedBy: ',')).
+	self executeSQLStatement: 'UPDATE page SET ', ((Array streamContents: [:stream | data keysAndValuesDo: [:key :val | stream nextPut: key, '=''', val, '''']]) joinSeparatedBy: ','), ' WHERE id=''', id, ''''.
 	
 	^ self sendJson: data asJsonString with: '/notebook/', id

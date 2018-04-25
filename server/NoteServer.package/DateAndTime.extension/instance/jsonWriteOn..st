@@ -1,4 +1,6 @@
 *NoteServer
 jsonWriteOn: aStream
 
-	self printOn: aStream
+	aStream nextPut: $".
+	self printOn: aStream.
+	aStream nextPut: $"
