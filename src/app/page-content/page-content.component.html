@@ -1,6 +1,12 @@
 <div *ngIf="page" class="p-4">
     <div class="input-group input-group-lg mb-4">
-        <input [(ngModel)]="page.title" placeholder="Title of Page" type="text" class="form-title form-control">
+        <input [(ngModel)]="page.title" (input)="changeContent()" placeholder="Title of Page" type="text" class="form-title form-control">
     </div>
-    <textarea class="form-control"> {{ page.content }} </textarea>
+    <div class="form-control">
+        <textarea #content [(ngModel)]="page.content" (input)="changeContent()" [style.height]="content.scrollHeight + 'px'" class="form-content"></textarea>
+    </div>
+
+    <div class="text-muted mt-1 text-right">
+        <small>{{saved ? 'All changes saved.' : 'Saving changes ...'}}</small>
+    </div>
 </div>
